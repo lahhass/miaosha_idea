@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="miaosha_idea:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="miaosha_idea.war">
+      <element id="artifact" artifact-name="miaosha_idea:war exploded" />
+    </root>
+  </artifact>
+</component>
