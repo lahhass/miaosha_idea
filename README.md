@@ -16,3 +16,31 @@ JDK|Spring Boot|MySQL|Redis|RabbitMQ
 7. 商品秒杀列表地址：http://localhost:8083/goods/to_list
 8. application.properties里可指定端口
 
+## 运行演示
+
+用户注册
+![用户注册](https://github.com/lahhass/pictures/blob/master/%E6%B3%A8%E5%86%8C.PNG?raw=true)
+
+
+用户登录
+![用户登录](https://github.com/lahhass/pictures/blob/master/%E7%99%BB%E5%BD%95.PNG?raw=true)
+
+
+秒杀商品列表
+![秒杀商品列表](https://github.com/lahhass/pictures/blob/master/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8.PNG?raw=true)
+
+
+秒杀倒计时
+![秒杀倒计时](https://github.com/lahhass/pictures/blob/master/%E7%A7%92%E6%9D%80%E7%95%8C%E9%9D%A2.PNG?raw=true)
+
+
+秒杀成功       
+![秒杀成功](https://github.com/lahhass/pictures/blob/master/%E6%88%90%E5%8A%9F.PNG?raw=true)
+
+
+订单详情
+![订单详情](https://github.com/lahhass/pictures/blob/master/%E8%AE%A2%E5%8D%95%E8%AF%A6%E6%83%85%E9%A1%B5.PNG?raw=true)
+
+
+秒杀已结束
+![秒杀已结束](https://github.com/lahhass/pictures/blob/master/%E7%BB%93%E6%9D%9F.PNG?raw=true)
