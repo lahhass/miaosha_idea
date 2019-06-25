@@ -1,5 +1,5 @@
-# miaosha_idea
-Java高并发秒杀项目
+## Spring Boot高并发秒杀项目
+## 详细介绍：https://blog.csdn.net/baidu_25104885/column/info/40503
 ## 开发工具
 IDEA 2017.1.2
 ## 项目环境
