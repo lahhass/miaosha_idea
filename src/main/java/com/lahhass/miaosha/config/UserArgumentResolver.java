@@ -32,8 +32,8 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
     public Object resolveArgument(MethodParameter methodParameter,
            ModelAndViewContainer modelAndViewContainer, NativeWebRequest webRequest,
            WebDataBinderFactory webDataBinderFactory) throws Exception {
-        HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
-        HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
+        //HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
+        //HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
             return UserContext.getUser();
     }
 

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Mapper
-@Repository
+@Repository  //表明该类是用来执行与数据库相关的操作（即dao对象）
 public interface UserDao {
 
     @Select("select * from user where id = #{id}")

@@ -32,11 +32,11 @@ public class AccessInterceptor extends HandlerInterceptorAdapter{
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         if(handler instanceof HandlerMethod) {
             MiaoshaUser user = getUser(request, response); //获取user
-            UserContext.setUser(user); //保存user,线程安全
+            UserContext.setUser(user); //拦截器已获取user，将user使用ThreadLocal类保存（线程安全），便于取用
 
             HandlerMethod hm = (HandlerMethod)handler;
-            AccessLimit accessLimit = hm.getMethodAnnotation(AccessLimit.class);
-            if(accessLimit == null) {
+            AccessLimit accessLimit = hm.getMethodAnnotation(AccessLimit.class); //获取方法注解
+            if(accessLimit == null) { //无该注解直接返回true
                 return true;
             }
             int seconds = accessLimit.seconds();
@@ -67,6 +67,7 @@ public class AccessInterceptor extends HandlerInterceptorAdapter{
     }
 
     private void render(HttpServletResponse response, CodeMsg cm) throws Exception{
+        //指定输出格式，否则会乱码
         response.setContentType("application/json;charset=UTF-8");
         OutputStream out = response.getOutputStream();
         String str = JSON.toJSONString(Result.error(cm));

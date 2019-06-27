@@ -50,7 +50,7 @@ public class MQReceiver {
         if (order != null) {
             return;
         }
-        //减库存 下订单 写入秒杀订单 秒杀成功后进入订单详情页
+        //减库存 下订单 写入秒杀订单 （事务：减库存成功了才会生成订单）
         miaoshaService.miaosha(user, goods);
 
     }

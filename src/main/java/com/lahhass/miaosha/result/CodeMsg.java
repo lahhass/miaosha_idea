@@ -44,9 +44,9 @@ public class CodeMsg {
         return msg;
     }
 
-    public CodeMsg fillArgs(Object... args) {
+    public CodeMsg fillArgs(Object... args) {  //实参个数可变
         int code = this.code;
-        String message = String.format(this.msg, args);
+        String message = String.format(this.msg, args); //原始信息拼接参数
         return new CodeMsg(code, message);
     }
 

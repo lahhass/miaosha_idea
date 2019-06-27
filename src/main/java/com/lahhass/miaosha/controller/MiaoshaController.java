@@ -181,6 +181,19 @@ public class MiaoshaController implements InitializingBean{
             return Result.error(CodeMsg.SESSION_ERROR);
         }
         //限流防刷，查询访问次数，拦截器
+
+//        //限制访问次数
+//        String uri = request.getRequestURI();
+//        String key = uri+"_"+user.getId();
+//        //限定key5s之内只能访问5次
+//        Integer count=redisService.get(AccessKey.access, key, Integer.class);
+//        if(count==null) {
+//            redisService.set(AccessKey.access, key, 1);
+//        }else if(count<5) {
+//            redisService.incr(AccessKey.access, key);
+//        }else {//超过5次
+//            return Result.error(CodeMsg.ACCESS_LIMIT_REACHED);
+//        }
         //校验验证码
         boolean check = miaoshaService.checkVerifyCode(user, goodsId,verifyCode);
         if (!check) {

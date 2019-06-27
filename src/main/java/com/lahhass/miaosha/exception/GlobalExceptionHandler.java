@@ -11,12 +11,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-
+/**
+ * @ControllerAdvice可用于实现：
+- 全局异常处理
+- 全局数据绑定
+- 全局预处理
+ */
 @ControllerAdvice
 @ResponseBody
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(value=Exception.class)
+    @ExceptionHandler(value=Exception.class)  //指明异常的处理类型
     public Result<String> exceptionHandler(HttpServletRequest request, Exception e){
 
         e.printStackTrace();

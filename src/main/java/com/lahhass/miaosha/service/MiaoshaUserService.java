@@ -112,8 +112,9 @@ public class MiaoshaUserService {
     }
 
     private void addCookie(MiaoshaUser user, HttpServletResponse response, String token) {
-        //生成Cookie,将token和对应用户写入第三方缓存redis
+        //将token和对应用户写入第三方缓存redis
         redisService.set(MiaoshaUserKey.token,token,user);
+        //生成Cookie
         Cookie cookie = new Cookie(COOKIE_NAME_TOKEN, token);
         cookie.setMaxAge(MiaoshaUserKey.token.expireSeconds());
         cookie.setPath("/");

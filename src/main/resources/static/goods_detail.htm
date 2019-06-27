@@ -92,9 +92,9 @@
             },
             success:function(data){
                 if (data.code == 0) {
-                    //window.location.href="/order_detail.htm?orderId="+data.data.id;
-                    //轮询服务端
+                    //获取秒杀地址
                     var path = data.data;
+                    //传入秒杀地址，进行秒杀
                     doMiaosha(path);
                 } else {
                     layer.msg(data.msg);
@@ -151,8 +151,6 @@
             },
             success:function(data){
                 if (data.code == 0) {
-                    //window.location.href="/order_detail.htm?orderId="+data.data.id;
-                    //轮询服务端
                     getMiaoshaResult($("#goodsId").val());
                 } else {
                     layer.msg(data.msg);
@@ -226,12 +224,14 @@ function countDown() {
             clearTimeout(timeout);//用于标识要取消的延迟执行代码块
         }
         $("#miaoshaTip").html("秒杀进行中");
+        //显示验证码图片和输入框
         $("#verifyCodeImg").attr("src", "/miaosha/verifyCode?goodsId="+$("#goodsId").val());
         $("#verifyCodeImg").show();
         $("#verifyCode").show();
     } else { //秒杀已结束
         $("#buyButton").attr("disabled", true);
         $("#miaoshaTip").html("秒杀已结束");
+        //隐藏验证码图片和输入框
         $("#verifyCodeImg").hide();
         $("#verifyCode").hide();
     }

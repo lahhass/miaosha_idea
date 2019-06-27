@@ -107,7 +107,7 @@ public class GoodsController {
         int remainSeconds = 0;
         if (now < startAt) { //秒杀未开始，倒计时
             miaoshaStatus = 0;
-            remainSeconds = (int)((startAt - now)/1000);
+            remainSeconds = (int)((startAt - now)/1000);  //毫秒变秒
         } else if (now > endAt) { //秒杀已结束
             miaoshaStatus = 2;
             remainSeconds = -1;
@@ -129,8 +129,7 @@ public class GoodsController {
         return html;
     }
 
-    //url缓存
-    // 静态内容为html 动态数据通过接口获取
+    //静态内容为html 动态数据通过接口获取
     @RequestMapping(value="/detail/{goodsId}")
     @ResponseBody
     public Result<GoodsDetailVo> detail(HttpServletRequest request, HttpServletResponse response,
