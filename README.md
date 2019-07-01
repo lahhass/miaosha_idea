@@ -17,6 +17,7 @@ JDK|Spring Boot|MySQL|Redis|RabbitMQ
  - 前端： Thymeleaf、Bootstrap、JQuery
  - 后端： SpringBoot、JSR303、MyBatis
  - 中间件： RabbitMQ、Redis、Druid
+ 
 html+JQuery实现前后端分离，Thymeleaf是一个服务端模板，类似于JSP
 JSR303服务端验证框架，做服务端参数校验
 RabbitMQ消息队列异步下单，Redis做相比MemoryCache有可持久化的优点，Druid连接池可以做监控，监控连接池的最大连接多少、最大并发多少、最长时间多少等。
