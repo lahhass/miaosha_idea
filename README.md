@@ -23,7 +23,7 @@ JSR303服务端验证框架，做服务端参数校验
 RabbitMQ消息队列异步下单，Redis做相比MemoryCache有可持久化的优点，Druid连接池可以做监控，监控连接池的最大连接多少、最大并发多少、最长时间多少等。
 ## 运行说明
 1. 安装redis、mysql、rabbitmq等环境
-2. MySQL-Front/Navicate输入sql文件
+2. MySQL-Front/Navicat输入sql文件
 3. 到src/main/resources下的application.properties下修改相关redis、mysql、rabbitmq的地址、用户名、密码等信息
 4. 在数据库秒杀商品表里面设置合理的秒杀开始时间与结束时间
 5. 注册地址：http://localhost:8083/register/to_register
